@@ -77,7 +77,7 @@ export const programs: Program[] = [
     name: 'كاراتيه أطفال',
     description:
       'كلاسات كاراتيه مخصصة للأطفال، بتبني الانضباط والثقة واللياقة من سن صغيرة في بيئة آمنة وممتعة.',
-    image: '/images/volt-gym/challenge-01.jpg',
-    imageAlt: 'كلاس كاراتيه للأطفال في VOLT GYM',
+    image: '/images/volt-gym/karate-program.jpg',
+    imageAlt: 'كابتن كاراتيه داخل VOLT GYM',
   },
 ];

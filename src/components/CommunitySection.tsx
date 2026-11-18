@@ -49,11 +49,25 @@ export default function CommunitySection() {
             {challenges.map((c) => (
               <article key={c.id} className="volt-card group relative">
                 <div className="relative">
-                  <VoltImage
-                    src={c.image}
-                    alt={c.imageAlt}
-                    className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  {c.video ? (
+                    <video
+                      className="aspect-[16/9] w-full object-cover"
+                      controls
+                      muted
+                      playsInline
+                      preload="metadata"
+                      poster={c.image}
+                      aria-label={c.imageAlt}
+                    >
+                      <source src={c.video} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <VoltImage
+                      src={c.image}
+                      alt={c.imageAlt}
+                      className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  )}
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-volt-charcoal to-transparent"
                     aria-hidden="true"

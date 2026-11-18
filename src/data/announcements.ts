@@ -22,6 +22,7 @@ export interface Challenge {
   body: string;
   image: string;
   imageAlt: string;
+  video?: string;
   active: boolean;
 }
 
@@ -56,6 +57,7 @@ export const challenges: Challenge[] = [
     body: 'تحدٍّ للمنتسبين الجدد: التزم بتمرين منتظم طوال الشهر مع متابعة من كباتن النادي، وسجّل تقدمك أسبوع بأسبوع.',
     image: '/images/volt-gym/challenge-01.jpg',
     imageAlt: 'تحدي البداية القوية في VOLT GYM',
+    video: '/images/volt-gym/challenge-video.mp4',
     // Not confirmed by the owner — must not be shown as a running challenge.
     active: false,
   },
