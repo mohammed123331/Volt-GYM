@@ -60,12 +60,6 @@ export default function HeroSection() {
 
       <div className="volt-container relative z-10 pb-24 pt-32 text-center lg:pb-32 lg:pt-40">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6">
-          <VoltImage
-            src={voltConfig.assets.logo}
-            alt="شعار VOLT GYM"
-            className="h-20 w-auto animate-fadeIn sm:h-24"
-          />
-
           <p className="animate-fadeUp text-xs font-bold uppercase tracking-[0.35em] text-volt-red [animation-delay:100ms]">
             SOHAG · EGYPT
           </p>
