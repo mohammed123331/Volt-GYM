@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { voltConfig } from '@/data/voltConfig';
-import VoltImage from '@/components/VoltImage';
+import VoltLogo from '@/components/VoltLogo';
 
 const navItems = [
   { label: 'الرئيسية', to: '/#home' },
@@ -72,12 +71,7 @@ export default function Navbar() {
     >
       <div className="volt-container flex h-16 items-center justify-between gap-3 lg:h-20">
         <Link to="/#home" className="flex shrink-0 items-center gap-3" aria-label="VOLT GYM — الرئيسية">
-          <VoltImage
-            src={voltConfig.assets.logo}
-            alt="شعار VOLT GYM"
-            className="h-10 w-auto lg:h-12"
-            decorative
-          />
+          <VoltLogo className="h-10 w-auto lg:h-12" />
         </Link>
 
         <nav aria-label="التنقل الرئيسي" className="hidden items-center gap-1 lg:flex">

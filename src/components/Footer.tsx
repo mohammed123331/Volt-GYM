@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Facebook, MapPin, Phone } from 'lucide-react';
 import { voltConfig } from '@/data/voltConfig';
+import VoltLogo from '@/components/VoltLogo';
 
 const quickLinks = [
   { label: 'الرئيسية', to: '/#home' },
@@ -17,8 +18,8 @@ export default function Footer() {
       <div className="volt-container">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="font-display text-2xl font-bold tracking-[0.25em]">VOLT</p>
-            <p className="mt-2 text-sm font-bold text-volt-red">{voltConfig.slogan}</p>
+            <VoltLogo className="h-12 w-auto" />
+            <p className="mt-3 text-sm font-bold text-volt-red">{voltConfig.slogan}</p>
             <p className="mt-4 max-w-xs text-xs leading-relaxed text-volt-gray">
               جيم VOLT في سوهاج — الزهراء، شارع الكرنك. برامج تدريب لكل المستويات، كلاسات جماعية، وكباتن بيقفوا
               جنبك خطوة بخطوة.

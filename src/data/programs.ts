@@ -17,8 +17,8 @@ export interface Program {
   description: string;
   /** Which confirmed coach leads this program, if any (slug from coaches.ts). */
   coachSlug?: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 export const programs: Program[] = [
@@ -28,32 +28,30 @@ export const programs: Program[] = [
     description:
       'تمارين الحديد وبناء العضلات وزيادة القوة بإشراف الكباتن، ببرنامج يناسب مستواك سواء بادئ من أول يوم أو لها سنين خبرة.',
     coachSlug: 'mohamed-elmesawy',
-    image: '/images/volt-gym/gym-equipment-01.jpg',
-    imageAlt: 'أوزان وأجهزة تمارين المقاومة في VOLT GYM',
+    image: '/images/volt-gym/workout-strength.jpg',
+    imageAlt: 'متدرب يؤدي تمرين مقاومة داخل VOLT GYM',
   },
   {
     id: 'fitness',
     name: 'لياقة ولياقة بدنية',
     description:
       'تمارين كارديو و conditioning تحسّن لياقتك القلبية وترفع مستوى طاقتك، بأسلوب تدريبي منظم وآمن.',
-    image: '/images/volt-gym/workout-01.jpg',
-    imageAlt: 'تمرين لياقة وكارديو داخل VOLT GYM',
+    image: '/images/volt-gym/fitness-conditioning.jpg',
+    imageAlt: 'متدرب يؤدي تمرين لياقة داخل VOLT GYM',
   },
   {
     id: 'weight',
     name: 'إدارة الوزن',
     description:
       'برامج مخصصة لخسارة الوزن أو زيادته بطريقة صحية ومتوازنة، مع متابعة مستمرة من كباتن النادي.',
-    image: '/images/volt-gym/workout-02.jpg',
-    imageAlt: 'متدرب يتابع برنامج إدارة الوزن في VOLT GYM',
+
   },
   {
     id: 'rehab',
     name: 'برامج التأهيل والإصابات',
     description:
       'تمارين تأهيل مدروسة لما بعد الإصابات، بمراحل تدرّج آمنة ترجعك للتمرين بخطوات ثابتة وبدون استعجال.',
-    image: '/images/volt-gym/gym-interior-02.jpg',
-    imageAlt: 'مساحة التأهيل والتمارين العلاجية في VOLT GYM',
+
   },
   {
     id: 'group',
@@ -61,16 +59,14 @@ export const programs: Program[] = [
     description:
       'كلاسات زيروباكس، ستيب، أيروبيكس وكارديو بوكسينج بطاقة جماعية تحفّزك وتخلّي التمرين يوم ممتع.',
     coachSlug: 'roaa',
-    image: '/images/volt-gym/class-cardio.jpg',
-    imageAlt: 'كلاس جماعي في VOLT GYM',
+
   },
   {
     id: 'sports',
     name: 'ألعاب فردية',
     description:
       'ألعاب فردية داخل النادي تناسب اللي بيحب يتمرن بروحه بروح تنافسية ومنظمة.',
-    image: '/images/volt-gym/gym-interior-01.jpg',
-    imageAlt: 'منطقة الألعاب الفردية في VOLT GYM',
+
   },
   {
     id: 'karate',

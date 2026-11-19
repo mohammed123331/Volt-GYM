@@ -20,7 +20,7 @@ export interface Challenge {
   id: string;
   title: string;
   body: string;
-  image: string;
+  image?: string;
   imageAlt: string;
   video?: string;
   active: boolean;
@@ -55,7 +55,7 @@ export const challenges: Challenge[] = [
     id: 'start-strong',
     title: 'تحدي البداية القوية',
     body: 'تحدٍّ للمنتسبين الجدد: التزم بتمرين منتظم طوال الشهر مع متابعة من كباتن النادي، وسجّل تقدمك أسبوع بأسبوع.',
-    image: '/images/volt-gym/challenge-01.jpg',
+    image: '/images/volt-gym/community-space.jpg',
     imageAlt: 'تحدي البداية القوية في VOLT GYM',
     video: '/images/volt-gym/challenge-video.mp4',
     // Not confirmed by the owner — must not be shown as a running challenge.
@@ -65,7 +65,7 @@ export const challenges: Challenge[] = [
     id: 'group-spirit',
     title: 'تحدي الكلاسات الجماعية',
     body: 'جمع صحابك وشاركوا في الكلاسات الجماعية — الطاقة الجماعية بتفرق في نتيجة التمرين، والتحدي بيكون على أعلى حضور.',
-    image: '/images/volt-gym/class-cardio.jpg',
+
     imageAlt: 'تحدي الكلاسات الجماعية في VOLT GYM',
     active: false,
   },

@@ -1,9 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
-import { ArrowRight, MessageCircle, ShieldAlert } from 'lucide-react';
+import { ArrowRight, Dumbbell, MessageCircle, ShieldAlert, Zap } from 'lucide-react';
 import { getCoach } from '@/data/coaches';
 import { classes, dayLabels } from '@/data/classes';
 import { voltConfig, whatsappUrl } from '@/data/voltConfig';
-import VoltImage from '@/components/VoltImage';
 import ShareButton from '@/components/ShareButton';
 import { useEffect } from 'react';
 
@@ -40,13 +39,9 @@ export default function CoachProfile() {
     <main className="pt-16 lg:pt-20">
       {/* Profile hero */}
       <header className="relative overflow-hidden border-b border-volt-line">
-        <VoltImage
-          src={coach.photo}
-          alt=""
-          decorative
-          className="absolute inset-0 h-full w-full object-cover opacity-25 blur-sm"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-volt-black/70 via-volt-black/80 to-volt-black" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(229,36,48,0.26),transparent_34%),linear-gradient(135deg,#1c1c1c,#080808)]" aria-hidden="true" />
+        <Dumbbell className="absolute bottom-10 left-10 text-white/10" size={180} strokeWidth={0.8} aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-volt-black/30 via-volt-black/70 to-volt-black" aria-hidden="true" />
 
         <div className="volt-container relative z-10 py-12 lg:py-16">
           <Link
@@ -58,11 +53,9 @@ export default function CoachProfile() {
           </Link>
 
           <div className="mt-6 flex flex-col items-center gap-6 sm:flex-row sm:items-end">
-            <VoltImage
-              src={coach.photo}
-              alt={coach.photoAlt}
-              className="h-36 w-36 shrink-0 rounded-2xl border-2 border-volt-red/60 object-cover shadow-[0_16px_48px_-12px_rgba(229,36,48,0.4)] sm:h-44 sm:w-44"
-            />
+            <div className="flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border-2 border-volt-red/60 bg-volt-charcoal2 shadow-[0_16px_48px_-12px_rgba(229,36,48,0.4)] sm:h-44 sm:w-44" role="img" aria-label={coach.photoAlt}>
+              <Zap className="text-volt-red" size={58} fill="currentColor" strokeWidth={1.5} />
+            </div>
             <div className="text-center sm:text-start">
               {!coach.approved && (
                 <span className="volt-chip mb-3 !border-volt-red/40 !text-volt-red">
