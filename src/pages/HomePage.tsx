@@ -6,6 +6,8 @@ import AboutSection from '@/components/AboutSection';
 import ProgramsSection from '@/components/ProgramsSection';
 import ScheduleSection from '@/components/ScheduleSection';
 import CoachesSection from '@/components/CoachesSection';
+import CoachAttendanceSection from '@/components/CoachAttendanceSection';
+import KarateSection from '@/components/KarateSection';
 import CommunitySection from '@/components/CommunitySection';
 import MembershipInquiryForm from '@/components/MembershipInquiryForm';
 import ContactSection from '@/components/ContactSection';
@@ -41,6 +43,8 @@ function Home() {
       <ProgramsSection />
       <ScheduleSection />
       <CoachesSection />
+      <CoachAttendanceSection />
+      <KarateSection />
       <CommunitySection />
       <MembershipInquiryForm />
       <ContactSection />

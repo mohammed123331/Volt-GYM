@@ -1,76 +1,98 @@
-/**
- * VOLT GYM — الكباتن
- * ------------------------------------------------------------------
- * ⚠️ سجلات مبدئية (DRAFT) — أسماء وردت في محتوى VOLT المنشور علنًا فقط.
- * ممنوع نشر مؤهلات أو خبرات أو سيرة ذاتية غير معتمدة.
- * لإضافة كابتن جديد: انسخ أي عنصر وعدّل البيانات — الموقع يتولّى الباقي
- * (صفحة شخصية برابط خاص /coaches/<slug> تتبدأ تلقائيًا).
- *
- * Future integration note: replace with a fetch from the coaches table;
- * CoachProfile + CoachCard need no changes.
- */
+export interface CoachAttendance {
+  days?: string;
+  time?: string;
+  label: string;
+}
 
 export interface Coach {
   slug: string;
   name: string;
-  /** One-line neutral intro — no invented biography. */
   intro: string;
-  /** Confirmed specialties only — leave empty until approved. */
   specialties: string[];
-  /** Class categories this coach leads (from classes.ts draft schedule). */
   classes: string[];
   photo: string;
   photoAlt: string;
-  /**false = appears on site marked "قيد الاعتماد" and hidden from share previews */
-  approved: boolean;
+  approved: true;
+  attendance?: CoachAttendance;
+  karate?: {
+    age: string;
+    schedule: string;
+    fee: string;
+    details: string[];
+  };
 }
 
 export const coaches: Coach[] = [
   {
     slug: 'mohamed-elmesawy',
-    name: 'كابتن محمد المسطي',
-    intro: 'من كباتن فريق VOLT GYM — استفسر عن الكلاسات والبرامج المتاحة معاه.',
-    // No specialty published yet — Elmesawy does not appear in the Nov 3, 2026
-    // schedule post, so any assignment here would be invented. Leave empty
-    // until the owner confirms his programs.
+    name: 'كابتن محمد المساوي',
+    intro: 'متواجد في VOLT GYM خلال الفترة الصباحية في الأيام المحددة.',
     specialties: [],
     classes: [],
-    photo: '/images/volt-gym/coach-mohamed.jpg',
-    photoAlt: 'كابتن محمد المسطي — VOLT GYM',
-    approved: false,
+    photo: '',
+    photoAlt: 'كابتن محمد المساوي — VOLT GYM',
+    approved: true,
+    attendance: { days: 'السبت، الاثنين، الأربعاء', time: 'من 10 صباحًا إلى 4 عصرًا', label: 'متواجد في الفترة الصباحية' },
   },
   {
     slug: 'maryam-ahmed',
     name: 'كابتن مريم أحمد',
-    intro: 'من كباتن فريق VOLT GYM — استفسر عن الكلاسات والبرامج المتاحة معاه.',
-    specialties: ['رقص شرقي'],
-    classes: ['رقص شرقي'],
-    photo: '/images/volt-gym/class-dance.jpg',
+    intro: 'مدربة كلاس الرقص الشرقي في VOLT GYM.',
+    specialties: ['الرقص الشرقي'],
+    classes: ['الرقص الشرقي'],
+    photo: '',
     photoAlt: 'كابتن مريم أحمد — VOLT GYM',
-    approved: false,
+    approved: true,
   },
   {
     slug: 'roaa',
-    name: 'كابتن رواء',
-    intro: 'من كباتن فريق VOLT GYM — استفسر عن الكلاسات والبرامج المتاحة معاه.',
-    specialties: ['زيروباكس', 'ستيب', 'كارديو', 'تأهيل'],
-    classes: ['زيروباكس', 'ستيب', 'كارديو', 'تأهيل'],
-    photo: '/images/volt-gym/class-cardio.jpg',
-    photoAlt: 'كابتن رواء — VOLT GYM',
-    approved: false,
+    name: 'كابتن رؤى',
+    intro: 'مدربة كلاس زومبا - ستيب - كارديو - تأهيل في VOLT GYM.',
+    specialties: ['زومبا', 'ستيب', 'كارديو', 'تأهيل'],
+    classes: ['زومبا - ستيب - كارديو - تأهيل'],
+    photo: '',
+    photoAlt: 'كابتن رؤى — VOLT GYM',
+    approved: true,
   },
   {
     slug: 'doha',
-    name: 'كابتن دعاء',
-    intro: 'من كباتن فريق VOLT GYM — استفسر عن الكلاسات والبرامج المتاحة معاه.',
-    specialties: ['أيروبيكس', 'كارديو بوكسينج', 'كروس فت', 'كور', 'تمارين عسكرية'],
-    classes: ['أيروبيكس', 'كارديو بوكسينج', 'كروس فت', 'كور', 'تمارين عسكرية'],
-    photo: '/images/volt-gym/workout-01.jpg',
-    photoAlt: 'كابتن دعاء — VOLT GYM',
-    approved: false,
+    name: 'كابتن ضحى',
+    intro: 'مدربة كلاس إيروبكس - كارديو بوكسينج - كروس فيت - كور - تأهيل عسكري في VOLT GYM.',
+    specialties: ['إيروبكس', 'كارديو بوكسينج', 'كروس فيت', 'كور', 'تأهيل عسكري'],
+    classes: ['إيروبكس - كارديو بوكسينج - كروس فيت - كور - تأهيل عسكري'],
+    photo: '',
+    photoAlt: 'كابتن ضحى — VOLT GYM',
+    approved: true,
+  },
+  {
+    slug: 'hussein-gaber',
+    name: 'كابتن حسين جابر',
+    intro: 'متواجد يوميًا في VOLT GYM خلال الفترة المسائية.',
+    specialties: [],
+    classes: [],
+    photo: '',
+    photoAlt: 'كابتن حسين جابر — VOLT GYM',
+    approved: true,
+    attendance: { label: 'متواجد يوميًا في الفترة المسائية' },
+  },
+  {
+    slug: 'malak-ali',
+    name: 'كابتن ملك علي أحمد علي',
+    intro: 'مدربة كاراتيه للأطفال من سن 5 سنوات.',
+    specialties: ['حزام أسود', 'حكم منطقة'],
+    classes: ['تدريب كاراتيه للأطفال من سن 5 سنوات'],
+    photo: '',
+    photoAlt: 'كابتن ملك علي أحمد علي — VOLT GYM',
+    approved: true,
+    karate: {
+      age: 'تدريب كاراتيه للأطفال من سن 5 سنوات',
+      schedule: 'الاثنين والأربعاء — من الساعة 5 إلى 7 مساءً',
+      fee: '250 جنيه',
+      details: ['تأهيل بدني', 'كاتا', 'مهارات قتالية', 'تجهيز للبطولات والمشاركة فيها'],
+    },
   },
 ];
 
 export function getCoach(slug: string | undefined): Coach | undefined {
-  return coaches.find((c) => c.slug === slug);
+  return coaches.find((coach) => coach.slug === slug);
 }

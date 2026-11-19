@@ -27,7 +27,6 @@ export const programs: Program[] = [
     name: 'جيم وتمارين مقاومة',
     description:
       'تمارين الحديد وبناء العضلات وزيادة القوة بإشراف الكباتن، ببرنامج يناسب مستواك سواء بادئ من أول يوم أو لها سنين خبرة.',
-    coachSlug: 'mohamed-elmesawy',
     image: '/images/volt-gym/workout-strength.jpg',
     imageAlt: 'متدرب يؤدي تمرين مقاومة داخل VOLT GYM',
   },
@@ -57,9 +56,7 @@ export const programs: Program[] = [
     id: 'group',
     name: 'كلاسات جماعية',
     description:
-      'كلاسات زيروباكس، ستيب، أيروبيكس وكارديو بوكسينج بطاقة جماعية تحفّزك وتخلّي التمرين يوم ممتع.',
-    coachSlug: 'roaa',
-
+      'كلاسات جماعية بطاقة عالية تحفّزك وتخلّي التمرين يوم ممتع.',
   },
   {
     id: 'sports',
@@ -72,7 +69,7 @@ export const programs: Program[] = [
     id: 'karate',
     name: 'كاراتيه أطفال',
     description:
-      'كلاسات كاراتيه مخصصة للأطفال، بتبني الانضباط والثقة واللياقة من سن صغيرة في بيئة آمنة وممتعة.',
+      'تدريب كاراتيه للأطفال من سن 5 سنوات مع تأهيل بدني، كاتا، مهارات قتالية وتجهيز للبطولات والمشاركة فيها.',
     image: '/images/volt-gym/karate-program.jpg',
     imageAlt: 'كابتن كاراتيه داخل VOLT GYM',
   },

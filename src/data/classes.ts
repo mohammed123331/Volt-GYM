@@ -1,126 +1,53 @@
-/**
- * VOLT GYM — جدول الكلاسات الأسبوعي
- * ------------------------------------------------------------------
- * ⚠️ بيانات مبدئية (DRAFT) — مأخوذة من منشور فيسبوك بتاريخ 3 نوفمبر 2026.
- * لا مواعيد محددة ولا قاعات منشورة هنا حتى يعتمدها صاحب النادي رسميًا.
- * أي تعديل يبدأ من هذا الملف — تحديث الأيام أو المدرب أو الفئة من هنا فقط.
- *
- * Future integration note: this maps 1:1 to a `classes` table
- * (day, category, coach_slug). Swap the static array for a fetch when
- * the Phase-2 dashboard ships.
- */
-
 export type ClassDay = 'sunday' | 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday';
 
 export interface GymClass {
   id: string;
   category: string;
   days: ClassDay[];
+  time: string;
   coachSlug: string;
   coachName: string;
-  /**true once the owner confirms the class officially — drives the draft badge */
-  confirmed: boolean;
+  confirmed: true;
 }
 
 export const dayLabels: Record<ClassDay, string> = {
   sunday: 'الأحد',
-  monday: 'الاتنين',
-  tuesday: 'التلات',
-  wednesday: 'الأربع',
+  monday: 'الاثنين',
+  tuesday: 'الثلاثاء',
+  wednesday: 'الأربعاء',
   thursday: 'الخميس',
   friday: 'الجمعة',
   saturday: 'السبت',
 };
 
-export const weekOrder: ClassDay[] = [
-  'saturday',
-  'sunday',
-  'monday',
-  'tuesday',
-  'wednesday',
-  'thursday',
-  'friday',
-];
+export const weekOrder: ClassDay[] = ['saturday', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 
 export const classes: GymClass[] = [
   {
     id: 'belly-dance',
-    category: 'رقص شرقي',
+    category: 'الرقص الشرقي',
     days: ['monday', 'wednesday'],
+    time: 'من 5 إلى 6',
     coachSlug: 'maryam-ahmed',
     coachName: 'كابتن مريم أحمد',
-    confirmed: false,
+    confirmed: true,
   },
   {
-    id: 'zumba',
-    category: 'زيروباكس',
+    id: 'zumba-step-cardio-rehab',
+    category: 'زومبا - ستيب - كارديو - تأهيل',
     days: ['sunday', 'tuesday', 'thursday'],
+    time: 'من 2 إلى 3',
     coachSlug: 'roaa',
-    coachName: 'كابتن رواء',
-    confirmed: false,
+    coachName: 'كابتن رؤى',
+    confirmed: true,
   },
   {
-    id: 'step',
-    category: 'ستيب',
-    days: ['sunday', 'tuesday', 'thursday'],
-    coachSlug: 'roaa',
-    coachName: 'كابتن رواء',
-    confirmed: false,
-  },
-  {
-    id: 'cardio',
-    category: 'كارديو',
-    days: ['sunday', 'tuesday', 'thursday'],
-    coachSlug: 'roaa',
-    coachName: 'كابتن رواء',
-    confirmed: false,
-  },
-  {
-    id: 'rehab-class',
-    category: 'تأهيل',
-    days: ['sunday', 'tuesday', 'thursday'],
-    coachSlug: 'roaa',
-    coachName: 'كابتن رواء',
-    confirmed: false,
-  },
-  {
-    id: 'aerobics',
-    category: 'أيروبيكس',
+    id: 'aerobics-combat-fitness',
+    category: 'إيروبكس - كارديو بوكسينج - كروس فيت - كور - تأهيل عسكري',
     days: ['thursday'],
+    time: 'من 10 إلى 5',
     coachSlug: 'doha',
-    coachName: 'كابتن دعاء',
-    confirmed: false,
-  },
-  {
-    id: 'cardio-boxing',
-    category: 'كارديو بوكسينج',
-    days: ['thursday'],
-    coachSlug: 'doha',
-    coachName: 'كابتن دعاء',
-    confirmed: false,
-  },
-  {
-    id: 'crossfit',
-    category: 'كروس فت',
-    days: ['thursday'],
-    coachSlug: 'doha',
-    coachName: 'كابتن دعاء',
-    confirmed: false,
-  },
-  {
-    id: 'core',
-    category: 'كور',
-    days: ['thursday'],
-    coachSlug: 'doha',
-    coachName: 'كابتن دعاء',
-    confirmed: false,
-  },
-  {
-    id: 'military',
-    category: 'تمارين عسكرية',
-    days: ['thursday'],
-    coachSlug: 'doha',
-    coachName: 'كابتن دعاء',
-    confirmed: false,
+    coachName: 'كابتن ضحى',
+    confirmed: true,
   },
 ];
